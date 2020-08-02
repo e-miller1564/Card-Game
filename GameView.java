@@ -84,6 +84,7 @@ public class GameView extends BorderPane {
 				frontCardImageView.setEffect(null);
 			});
 			frontCardImageView.setOnMousePressed(evt->{
+				//this is a test commit
 				frontCardImageView.setEffect(colorAdjustDark);
 			});
 			frontCardImageView.setOnMouseReleased(evt->{
