@@ -1,0 +1,7 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Program Files\\Java\\jdk1.8.0_201\\jre\\lib\\ext\\jfxrt.jar"
+    ],
+    "java.dependency.packagePresentation": "hierarchical"
+}
