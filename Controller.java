@@ -20,6 +20,7 @@ public class Controller {
 
 		this.player1PlayArea = new PlayArea();
 		// this.player2PlayArea = new PlayArea();
+		// this is another test commit
 
 		configureButtons();
 		mainStage.setScene(gameScene);
