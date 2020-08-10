@@ -24,17 +24,17 @@ public class GameView extends BorderPane {
 	public GridPane gPanePlayer1Piles;
 	public GridPane gPanePlayer2Piles;
 
-	public ImageView iViewEmptyPile1Player1;
-	public ImageView iViewEmptyPile2Player1;
-	public ImageView iViewEmptyPile3Player1;
-	public ImageView iViewEmptyPile4Player1;
-	public ImageView iViewEmptyPile5Player1;
+	public ImageView iViewPile1Player1;
+	public ImageView iViewPile2Player1;
+	public ImageView iViewPile3Player1;
+	public ImageView iViewPile4Player1;
+	public ImageView iViewPile5Player1;
 
-	public ImageView iViewEmptyPile1Player2;
-	public ImageView iViewEmptyPile2Player2;
-	public ImageView iViewEmptyPile3Player2;
-	public ImageView iViewEmptyPile4Player2;
-	public ImageView iViewEmptyPile5Player2;
+	public ImageView iViewPile1Player2;
+	public ImageView iViewPile2Player2;
+	public ImageView iViewPile3Player2;
+	public ImageView iViewPile4Player2;
+	public ImageView iViewPile5Player2;
 
 	public ColorAdjust colorAdjustBright;
 	public ColorAdjust colorAdjustDark;
@@ -51,23 +51,23 @@ public class GameView extends BorderPane {
 		gPanePlayer1Piles = new GridPane();
 		gPanePlayer2Piles = new GridPane();
 
-		iViewEmptyPile1Player1 = new ImageView(new Image("textures/Cards/Empty Pile.jpg"));
-		iViewEmptyPile2Player1 = new ImageView(new Image("textures/Cards/Empty Pile.jpg"));
-		iViewEmptyPile3Player1 = new ImageView(new Image("textures/Cards/Empty Pile.jpg"));
-		iViewEmptyPile4Player1 = new ImageView(new Image("textures/Cards/Empty Pile.jpg"));
-		iViewEmptyPile5Player1 = new ImageView(new Image("textures/Cards/Empty Pile.jpg"));
+		iViewPile1Player1 = new ImageView(new Image("textures/Cards/Empty Pile.jpg"));
+		iViewPile2Player1 = new ImageView(new Image("textures/Cards/Empty Pile.jpg"));
+		iViewPile3Player1 = new ImageView(new Image("textures/Cards/Empty Pile.jpg"));
+		iViewPile4Player1 = new ImageView(new Image("textures/Cards/Empty Pile.jpg"));
+		iViewPile5Player1 = new ImageView(new Image("textures/Cards/Empty Pile.jpg"));
 
-		iViewEmptyPile1Player1.setDisable(true);
-		iViewEmptyPile2Player1.setDisable(true);
-		iViewEmptyPile3Player1.setDisable(true);
-		iViewEmptyPile4Player1.setDisable(true);
-		iViewEmptyPile5Player1.setDisable(true);
+		iViewPile1Player1.setDisable(true);
+		iViewPile2Player1.setDisable(true);
+		iViewPile3Player1.setDisable(true);
+		iViewPile4Player1.setDisable(true);
+		iViewPile5Player1.setDisable(true);
 
-		iViewEmptyPile1Player2 = new ImageView(new Image("textures/Cards/Red Card Back.jpg"));
-		iViewEmptyPile2Player2 = new ImageView(new Image("textures/Cards/Red Card Back.jpg"));
-		iViewEmptyPile3Player2 = new ImageView(new Image("textures/Cards/Red Card Back.jpg"));
-		iViewEmptyPile4Player2 = new ImageView(new Image("textures/Cards/Red Card Back.jpg"));
-		iViewEmptyPile5Player2 = new ImageView(new Image("textures/Cards/Red Card Back.jpg"));
+		iViewPile1Player2 = new ImageView(new Image("textures/Cards/Red Card Back.jpg"));
+		iViewPile2Player2 = new ImageView(new Image("textures/Cards/Red Card Back.jpg"));
+		iViewPile3Player2 = new ImageView(new Image("textures/Cards/Red Card Back.jpg"));
+		iViewPile4Player2 = new ImageView(new Image("textures/Cards/Red Card Back.jpg"));
+		iViewPile5Player2 = new ImageView(new Image("textures/Cards/Red Card Back.jpg"));
 
 		colorAdjustBright = new ColorAdjust();
 		colorAdjustDark = new ColorAdjust();
@@ -90,11 +90,11 @@ public class GameView extends BorderPane {
 			});
 			frontCardImageView.setOnMouseReleased(evt->{
 				if(Controller.getSelectedCardFromDeck() == null) {
-					iViewEmptyPile1Player1.setDisable(false);
-					iViewEmptyPile2Player1.setDisable(false);
-					iViewEmptyPile3Player1.setDisable(false);
-					iViewEmptyPile4Player1.setDisable(false);
-					iViewEmptyPile5Player1.setDisable(false);
+					iViewPile1Player1.setDisable(false);
+					iViewPile2Player1.setDisable(false);
+					iViewPile3Player1.setDisable(false);
+					iViewPile4Player1.setDisable(false);
+					iViewPile5Player1.setDisable(false);
 					Controller.setSelectedCardFromDeck(c);
 					hBoxPlayer1Deck.getChildren().remove(frontCardImageView);
 				}
@@ -115,19 +115,19 @@ public class GameView extends BorderPane {
 
 		gPanePlayer1Piles.setPadding(new Insets(10));
 		gPanePlayer1Piles.setHgap(5);
-		gPanePlayer1Piles.add(iViewEmptyPile1Player1, 0, 0);
-		gPanePlayer1Piles.add(iViewEmptyPile2Player1, 1, 0);
-		gPanePlayer1Piles.add(iViewEmptyPile3Player1, 2, 0);
-		gPanePlayer1Piles.add(iViewEmptyPile4Player1, 3, 0);
-		gPanePlayer1Piles.add(iViewEmptyPile5Player1, 4, 0);
+		gPanePlayer1Piles.add(iViewPile1Player1, 0, 0);
+		gPanePlayer1Piles.add(iViewPile2Player1, 1, 0);
+		gPanePlayer1Piles.add(iViewPile3Player1, 2, 0);
+		gPanePlayer1Piles.add(iViewPile4Player1, 3, 0);
+		gPanePlayer1Piles.add(iViewPile5Player1, 4, 0);
 
 		gPanePlayer2Piles.setPadding(new Insets(10));
 		gPanePlayer2Piles.setHgap(5);
-		gPanePlayer2Piles.add(iViewEmptyPile1Player2, 0, 0);
-		gPanePlayer2Piles.add(iViewEmptyPile2Player2, 1, 0);
-		gPanePlayer2Piles.add(iViewEmptyPile3Player2, 2, 0);
-		gPanePlayer2Piles.add(iViewEmptyPile4Player2, 3, 0);
-		gPanePlayer2Piles.add(iViewEmptyPile5Player2, 4, 0);
+		gPanePlayer2Piles.add(iViewPile1Player2, 0, 0);
+		gPanePlayer2Piles.add(iViewPile2Player2, 1, 0);
+		gPanePlayer2Piles.add(iViewPile3Player2, 2, 0);
+		gPanePlayer2Piles.add(iViewPile4Player2, 3, 0);
+		gPanePlayer2Piles.add(iViewPile5Player2, 4, 0);
 
 		hBoxPlayer1PlayArea.getChildren().add(gPanePlayer1Piles);
 		hBoxPlayer1PlayArea.setAlignment(Pos.CENTER);
