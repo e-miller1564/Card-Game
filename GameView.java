@@ -10,6 +10,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 
 
 public class GameView extends BorderPane {
@@ -39,10 +40,13 @@ public class GameView extends BorderPane {
 	public ColorAdjust colorAdjustBright;
 	public ColorAdjust colorAdjustDark;
 
+	public Text gameKnowledge;
+
 	public GameView() {
 		player1Deck = new Deck();
 		// player2Deck = new Deck();
 
+		gameKnowledge = new Text();
 		hBoxPlayer1Deck = new HBox();
 		// hBoxPlayer2Deck = new HBox();
 		vBoxPlayArea = new VBox();
@@ -68,6 +72,12 @@ public class GameView extends BorderPane {
 		iViewPile3Player2 = new ImageView(new Image("textures/Cards/Red Card Back.jpg"));
 		iViewPile4Player2 = new ImageView(new Image("textures/Cards/Red Card Back.jpg"));
 		iViewPile5Player2 = new ImageView(new Image("textures/Cards/Red Card Back.jpg"));
+
+		iViewPile1Player2.setRotate(180);
+		iViewPile2Player2.setRotate(180);
+		iViewPile3Player2.setRotate(180);
+		iViewPile4Player2.setRotate(180);
+		iViewPile5Player2.setRotate(180);
 
 		colorAdjustBright = new ColorAdjust();
 		colorAdjustDark = new ColorAdjust();

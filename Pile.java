@@ -20,11 +20,15 @@ public class Pile {
 		cardStack.push(c);
 	}
 
-	public boolean isFull(){
+	public boolean isFull() {
 		if(cardStack.size() == 5){
 			return true;
 		}
 		else
 			return false;
+	}
+
+	public boolean isEmpty() {
+		return cardStack.empty();
 	}
 }
